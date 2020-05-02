@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+  <!--
+    SWF output options.
+  -->
+  <output>
+    <movie outputType="Application"/>
+    <movie input=""/>
+    <movie path="Project.xml"/>
+    <movie fps="60"/>
+    <movie width="640"/>
+    <movie height="360"/>
+    <movie version="1"/>
+    <movie minorVersion="0"/>
+    <movie platform="Lime"/>
+    <movie background="ffffff"/>
+  </output>
+
+  <!--
+    Other classes to compile into the SWF.
+  -->
+  <classpaths>
+    <class path="source"/>
+  </classpaths>
+
+  <!--
+    Build options.
+  -->
+  <build>
+    <option directives=""/>
+    <option flashStrict="False"/>
+    <option mainClass="ApplicationMain"/>
+    <option enabledebug="False"/>
+    <option additional=""/>
+  </build>
+
+  <!--
+    HaxeLib libraries.
+  -->
+  <haxelib>
+    <!-- Example: <library name="..."/> -->
+  </haxelib>
+
+  <!--
+    Class files to compile (other referenced files will be automatically 
+    included).
+  -->
+  <compileTargets>
+    <compile path="source\Main.hx"/>
+  </compileTargets>
+
+  <!--
+    Assets to embed in the SWF output.
+  -->
+  <library>
+    <!-- Example: <asset path="..." id="..." update="..." glyphs="..." mode="..." place="..." sharepoint="..."/> -->
+  </library>
+
+  <!--
+    Paths to exclude from the Project Explorer tree.
+  -->
+  <hiddenPaths>
+    <!-- Example: <hidden path="..."/> -->
+  </hiddenPaths>
+
+  <!--
+    Execute before build.
+  -->
+  <preBuildCommand/>
+
+  <!--
+    Execute after build.
+  -->
+  <postBuildCommand alwaysRun="False"/>
+
+  <!--
+    Other project options.
+  -->
+  <options>
+    <option showHiddenPaths="False"/>
+    <option testMovie="Custom"/>
+    <option testMovieCommand=""/>
+  </options>
+
+  <!--
+    Plugin storage.
+  -->
+  <storage/>
+</project>

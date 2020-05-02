@@ -1,0 +1,116 @@
+package $(PackageName)$(CSLB){
+  // Importing packages
+  import flash.display.Sprite;
+  import flash.events.Event;
+  import flash.text.AntiAliasType;
+  import flash.text.TextField;
+  import flash.text.TextFieldAutoSize;
+  import flash.text.TextFieldType;
+  import flash.text.TextFormat;
+  
+  /**
+  $(CBI)* $(ProjectName) 
+  $(CBI)* ----------------------------------------------------------------------
+  $(CBI)* Project description goes here.
+  $(CBI)* 
+  $(CBI)* @author      $(DefaultUser)
+  $(CBI)* @link        http://address
+  $(CBI)* @version     0.0.1
+  $(CBI)* @copy        ®201X OWNER
+  $(CBI)*/
+  public class Main extends Sprite $(CSLB){
+    /**
+     * Main constructor.
+     */
+    public function Main() $(CSLB){
+      if (stage) {
+        init();
+      } else {
+        addEventListener(Event.ADDED_TO_STAGE, init);
+      }
+    }
+  
+    /**
+     * Main event.
+     * 
+     * @param e Event
+     */
+    private function init(e:Event = null):void $(CSLB){
+      // Remove this event listener
+      removeEventListener(Event.ADDED_TO_STAGE, init);
+    
+      // Debug message
+      trace('Initialized!');
+      
+      // Game code goes here
+      
+      debugTitle(
+        "$(ProjectName)", 
+        "Project description goes here, make it short!"
+      );
+    }
+    
+    /**
+     * Shows debug title and info
+     * 
+     * @param name Project title
+     * @param info Brief description of the project
+     */
+    private function debugTitle(name:String = "", info:String = ""):void 
+    {
+      // If title was declared
+      if ("" != name) {
+        var nameText:TextField = new TextField();
+        var nameLook:TextFormat = new TextFormat(
+          "Carrois Gothic", 
+          20, 
+          0x2c2825, 
+          false
+        );
+        
+        nameText.text = name;
+        nameText.antiAliasType = AntiAliasType.ADVANCED;
+        nameText.autoSize = TextFieldAutoSize.LEFT;
+        nameText.type = TextFieldType.DYNAMIC;
+        nameText.multiline = false;
+        nameText.selectable = false;
+        nameText.setTextFormat(nameLook);
+        
+        nameText.x = 10;
+        nameText.y = 10;
+        
+        addChild(nameText);
+      }
+      
+      if ("" != info) {
+        var infoText:TextField = new TextField();
+        var infoLook:TextFormat = new TextFormat(
+          "Carrois Gothic", 
+          14, 
+          0x8d928b, 
+          false
+        );
+        
+        infoText.text = info;
+        infoText.antiAliasType = AntiAliasType.ADVANCED;
+        infoText.autoSize = TextFieldAutoSize.LEFT;
+        infoText.type = TextFieldType.DYNAMIC;
+        infoText.multiline = false;
+        infoText.selectable = false;
+        infoText.setTextFormat(infoLook);
+        
+        if ("" != name) {
+          // If title was declared
+          infoText.x = 10;
+          infoText.y = 35;
+        } else {
+          // If title wasn't declared
+          infoText.x = 10;
+          infoText.y = 10;
+        }
+        
+        addChild(infoText);
+      }
+    }
+  }
+}

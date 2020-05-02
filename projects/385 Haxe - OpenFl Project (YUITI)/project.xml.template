@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <!-- APPLICATION SETTINGS ________________________________________ -->
+  <meta title="$(ProjectName)" package="$(PackageDot)$(ProjectID)" version="0.0.1" company="$(DefaultUser)"/>
+  
+  <!-- 
+    Output settings.
+  -->
+  <app main="$(PackageDot)Main" file="$(ProjectID)" path="export"/>
+	
+  <!-- WINDOW SETTINGS _____________________________________________ -->
+	
+  <!--
+    These settings apply to all targets.
+  -->
+  <window width="640" height="360" background="#000000" fps="60" hardware="true" vsync="true"/>
+	
+  <!--
+    HTML5 specific settings.
+  -->
+  <window if="html5" resizable="false"/>
+	
+  <!--
+    Desktop specific settings.
+  -->
+  <window if="desktop || cpp" width="640" height="360" orientation="landscape" fullscreen="true" vsync="false" antialiasing="0"/>
+	
+  <!--
+    Mobile specific settings.
+  -->
+	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0"/>
+	
+  <!-- LIBRARIES ___________________________________________________ -->
+    
+  <!--
+    OpenFL.
+  -->
+  <haxelib name="openfl"/>
+
+  <!--
+    Actuate (tweening).
+  -->
+  <haxelib name="actuate"/>
+
+  <!-- FILE PATH SETTINGS __________________________________________ -->
+
+  <!--
+    Source-code path.
+  -->
+  <source path="source"/>
+
+  <!--
+    Global assets path.
+  -->
+  <assets path="assets"/>
+
+  <!--
+    Font assets path.
+  -->
+  <assets path="assets/fonts" rename="fonts"/>
+
+  <!--
+    Image assets path.
+  -->
+  <assets path="assets/image" rename="image"/>
+
+  <!--
+    Music assets path.
+  -->
+  <assets path="assets/music" rename="music"/>
+
+  <!--
+    Sound assets path.
+  -->
+  <assets path="assets/sound" rename="sound"/>
+
+  <!--
+    Application Icon
+  -->
+  <icon path="assets/icon.svg"/>
+	
+  <!-- PERFORMANCE _________________________________________________ -->
+    
+  <!-- 
+    Optimize output.
+  -->
+  <!-- <haxeflag name="-dce full" /> -->
+</project>

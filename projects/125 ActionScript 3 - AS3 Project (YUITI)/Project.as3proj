@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="1">
+  <!--
+    SWF output options.
+  -->
+  <output>
+    <movie outputType="Application"/>
+    <movie input=""/>
+    <movie path="export/$(ProjectID).swf"/>
+    <movie fps="60"/>
+    <movie width="640"/>
+    <movie height="360"/>
+    <movie version="17"/>
+    <movie minorVersion="0"/>
+    <movie platform="Flash Player"/>
+    <movie background="#000000"/>
+  </output>
+
+  <!--
+    Other classes to compile into the SWF file.
+  -->
+  <classpaths>
+    <class path="source"/>
+  </classpaths>
+
+  <!--
+    Build options.
+  -->
+  <build>
+    <option accessible="False"/>
+    <option allowSourcePathOverlap="False"/>
+    <option benchmark="False"/>
+    <option es="False"/>
+    <option loadConfig=""/>
+    <option optimize="True"/>
+    <option showActionScriptWarnings="True"/>
+    <option showBindingWarnings="True"/>
+    <option showDeprecationWarnings="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option strict="True"/>
+    <option useNetwork="True"/>
+    <option useResourceBundleMetadata="True"/>
+    <option warnings="True"/>
+    <option verboseStackTraces="False"/>
+    <option staticLinkRSL="True"/>
+    <option additional=""/>
+    <option customSDK=""/>
+  </build>
+
+  <!--
+    Class files to compile (other referenced files will be automatically 
+    included).
+  -->
+  <compileTargets>
+    <compile path="source\$(PackageSlash)Main.as"/>
+  </compileTargets>
+
+  <!--
+    Paths to exclude from Project Explorer tree.
+  -->
+  <hiddenPaths>
+    <!-- Example: <hidden path="..."/> -->
+  </hiddenPaths>
+
+  <!--
+    Execute before build.
+  -->
+  <preBuildCommand/>
+
+  <!--
+    Execute after build.
+  -->
+  <postBuildCommand alwaysRun="False"/>
+
+  <!--
+    Other project options.
+  -->
+  <options>
+    <option showHiddenPaths="False"/>
+    <option testMovie="Default"/>
+  </options>
+</project>

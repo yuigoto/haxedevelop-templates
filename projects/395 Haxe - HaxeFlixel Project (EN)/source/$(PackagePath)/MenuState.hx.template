@@ -1,0 +1,53 @@
+package $(PackageName);
+
+// Importing packages
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.FlxState;
+import flixel.text.FlxText;
+import flixel.ui.FlxButton;
+import flixel.math.FlxMath;
+
+/**
+  $(ProjectName) : MenuState 
+  ----------------------------------------------------------------------
+  A game state.
+  
+  One of the basic states for this project, together with PlayState. This 
+  represents the menu state.
+  
+  HaxeFlixel uses isolated states to avoid problems like memory leaks (well, 
+  according to what the manual says).
+  
+  @author     $(DefaultUser) 
+  @since      $(ProjectName) 0.0.1
+  @version    0.0.1
+**/
+class MenuState extends FlxState 
+{
+  /**
+    State constructor.
+
+    Called when this class is loaded.
+  **/
+  override public function create():Void 
+  {
+    // Calling "parent" create
+    super.create();
+  }
+      
+  /**
+    State update method.
+
+    Called every frame, it's responsible for updating the state of every 
+    event and object in this state.
+
+    @param elapsed Float 
+        Time, in seconds, since the last frame
+  **/
+  override public function update( elapsed:Float ):Void 
+  {
+    // Calling "parent" update
+    super.update( elapsed );
+  }
+}

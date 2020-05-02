@@ -1,0 +1,52 @@
+package $(PackageName);
+
+// Importing packages
+import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.Lib;
+
+/**
+  $(ProjectName)
+  ----------------------------------------------------------------------
+  [Description]
+
+  @author     $(DefaultUser)
+  @link       https://address
+  @version    0.0.1
+  @copy       201X Author
+**/
+class Main extends Sprite $(CSLB){
+  /** 
+    Class constructor.
+  **/
+  public function new() $(CSLB){
+    // Call super constructor
+    super();
+
+    // If stage is set, execute main event
+    if (null != stage) {
+      init(null);
+    } else {
+      // If not, sets main event as a one-time event listener
+      addEventListener(Event.ADDED_TO_STAGE, init);
+    }
+  }
+
+  /**
+    Main event.
+
+    @param e 
+        Event handler
+  **/
+  public function init(e:Event):Void $(CSLB){
+    // Remove this event listener
+    removeEventListener(Event.ADDED_TO_STAGE, init);
+    
+    // Debug message
+    #if debug
+      trace('$(ProjectName), initialized.');
+    #end
+    
+    // Place code below 
+  }
+}

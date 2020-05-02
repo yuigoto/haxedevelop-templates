@@ -1,0 +1,14 @@
+package $(PackageName);
+
+/**
+  $(ProjectName) : AssetPaths 
+  ======================================================================
+  Responsável por montar referências de assets, para facilitar o uso dos 
+  mesmos através de atalhos.
+  ----------------------------------------------------------------------
+  @author     $(DefaultUser) 
+  @since      $(ProjectName) 0.0.1
+  @version    0.0.1
+**/
+@:build( flixel.system.FlxAssets.buildFileReferences( "assets", true ) )
+class AssetPaths {}

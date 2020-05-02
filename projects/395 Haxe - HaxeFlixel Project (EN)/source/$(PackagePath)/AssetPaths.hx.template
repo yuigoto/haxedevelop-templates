@@ -1,0 +1,14 @@
+package $(PackageName);
+
+/**
+  $(ProjectName) : AssetPaths 
+  ----------------------------------------------------------------------
+  Builds assets references for ease of use inside the project, so we have 
+  shortcuts instead of full paths.
+
+  @author     $(DefaultUser) 
+  @since      $(ProjectName) 0.0.1
+  @version    0.0.1
+**/
+@:build( flixel.system.FlxAssets.buildFileReferences( "assets", true ) )
+class AssetPaths {}

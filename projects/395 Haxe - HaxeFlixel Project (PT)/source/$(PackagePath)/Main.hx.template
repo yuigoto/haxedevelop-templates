@@ -1,0 +1,30 @@
+package $(PackageName);
+
+// Importando pacotes
+import flixel.FlxGame;
+import openfl.display.Sprite;
+
+/** 
+  $(ProjectName) : Main
+  ====================================================================== 
+  [DescriçãoDoProjeto]
+  ----------------------------------------------------------------------
+  @author     $(DefaultUser)
+  @link       https://addres
+  @version    0.0.1
+  @copy       201X Author
+**/
+class Main extends Sprite 
+{
+  /**
+   * Construtor principal.
+   */
+  public function new() 
+  {
+    // Chamando super construtor
+    super();
+
+    // Adicionando novo objeto FlxGame, com status "MenuState"
+    addChild( new FlxGame( 640, 360, MenuState ) );
+  }
+}
